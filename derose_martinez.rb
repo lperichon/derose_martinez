@@ -43,7 +43,7 @@ class DeRoseMartinezApp < Sinatra::Base
     Pony.mail :to => settings.email_address,
               :from => params[:email],
               :subject => 'Contacto Web',
-              :body =>  erb('email/contact', :layout => false),
+              :body =>  erb(:'email/contact', :layout => false),
               :via => :smtp,
               :via_options => {
                   :address              => 'smtp.' + settings.email_service,
