@@ -6,12 +6,12 @@ class DeRoseMartinezApp < Sinatra::Base
   set :static, true
   set :public, File.dirname(__FILE__) + '/static'
 
-  set :email_username, ENV['SENDGRID_USERNAME'] || 'luisperichon@gmail.com'
-  set :email_password, ENV['SENDGRID_PASSWORD'] || 'ĺep7311'
-  set :email_port, ENV['SENDGRID_PORT'] || '587'
+  set :email_username, ENV['SENDGRID_USERNAME']
+  set :email_password, ENV['SENDGRID_PASSWORD']
+  set :email_port, '587'
   set :email_address, 'luisperichon@gmail.com'
-  set :email_service, ENV['EMAIL_SERVICE'] || 'gmail.com'
-  set :email_domain, ENV['SENDGRID_DOMAIN'] || 'localhost'
+  set :email_service, 'sendgrid.net'
+  set :email_domain, ENV['SENDGRID_DOMAIN']
 
   mime_type :ttf, "application/octet-stream"
   mime_type :woff, "application/octet-stream"
