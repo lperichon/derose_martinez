@@ -27,18 +27,23 @@ class DeRoseMartinezApp < Sinatra::Base
   post '/contact' do
     require 'pony'
 
-    name = params[:name]
+    @name = params[:name]
 
-    from = ""
-    from = params[:name] + "<" if name
-    from << params[:email]
-    from << ">" if name
+    @from = ""
+    @from = params[:name] + "<" if name
+    @from << params[:email]
+    @from << ">" if @name
 
+    @telephone = params[:telephone]
+
+    @contact_reason = params[:contactReason]
+
+    @message = params[:message]
 
     Pony.mail :to => settings.email_address,
               :from => params[:email],
               :subject => 'Contacto Web',
-              :body =>  erb('email/contact'),
+              :body =>  erb('email/contact', :layout => false),
               :via => :smtp,
               :via_options => {
                   :address              => 'smtp.' + settings.email_service,
