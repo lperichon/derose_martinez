@@ -13,12 +13,12 @@
     <div class="bottom-middle">
         <div class="request-form">
             <div class="request-text georgia">Ingresá tu e-mail para recibir más información (No hacemos spam!)</div>
-            <form action="/contact" method="post">
+            <form action="/contact" method="post" id="contact_form">
                 <div style="margin: 10px 0px 0px;">
                     <div style="float:left"><input class="request-textfield georgia" name="email"
                                                    id="Subscriber_email" type="text" value=""></div>
                     <div class="league-gothic" style="float:left">
-                        <a href="#"><span class="submit button center">Enviar</span><span class="submit button right"></span></a>
+                        <a href="#" onclick="$('#contact_form').submit();"><span class="submit button center">Enviar</span><span class="submit button right"></span></a>
                     </div>
                 </div>
             </form>

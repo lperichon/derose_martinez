@@ -30,7 +30,7 @@ class DeRoseMartinezApp < Sinatra::Base
     @name = params[:name]
 
     @from = ""
-    @from = params[:name] + "<" if name
+    @from = params[:name] + "<" if @name
     @from << params[:email]
     @from << ">" if @name
 
