@@ -34,7 +34,9 @@ class DeRoseMartinezApp < Sinatra::Base
     @from << params[:email]
     @from << ">" if @name
 
-    @telephone = params[:telephone]
+    @email = params[:email]
+
+    @phone = params[:phone]
 
     @contact_reason = params[:contactReason]
 
