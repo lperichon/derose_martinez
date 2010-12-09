@@ -58,5 +58,7 @@ class DeRoseMartinezApp < Sinatra::Base
     redirect '/success'
   end
 
-  get('/success'){"Thanks for your email. We'll be in touch soon."}
+  get('/success') do
+    erb :success
+  end
 end
