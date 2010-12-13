@@ -21,7 +21,7 @@ class DeRoseMartinezApp < Sinatra::Base
   end
 
   get '/contact' do
-    erb :contact
+    erb(:contact, :layout => :'page-layout')
   end
 
   post '/contact' do
@@ -64,10 +64,10 @@ class DeRoseMartinezApp < Sinatra::Base
   end
 
   get('/swasthya-yoga') do
-    erb 'swasthya-yoga', :layout => :'page-layout'
+    erb :'swasthya-yoga', :layout => :'page-layout'
   end
 
   get('/nosotros') do
-    erb 'nosotros', :layout => :'page-layout'
+    erb :'nosotros', :layout => :'page-layout'
   end
 end
