@@ -1,6 +1,6 @@
 body{
 	margin: 0;
-	background: #000000 url("../images/bottom-background.png");
+	background: #1A0701;
 }
 
 @font-face {
@@ -47,7 +47,7 @@ a{
 }
 
 .top-wrap{
-	height: 100px;
+	height: 50px;
 }
 
 .top-wrap-tour{
@@ -111,12 +111,10 @@ a{
 }
 
 .footer-wrap{
-	background:url("../images/bottom-background.png") repeat scroll 0 0 transparent;
 	height:243px;
 }
 
 .footer{
-	background:url("../images/bottom-background.png") repeat scroll 0 0 transparent;
 	height:243px;
 	margin:0 auto;
 	position:relative;
@@ -125,11 +123,12 @@ a{
 
 .logo{
 	float: left;
-	margin: 5px 0px 0px 20px;
+	margin: 0px 0px 0px 20px;
 }
 
 .top-right{
 	float: right;
+    font-weight: bold;
 }
 
 .top-right div{
@@ -153,11 +152,12 @@ a{
 }
 
 .slogan {
-	width: 671px;
-    height: 112px;
+	width: 612px;
+    height: 80px;
 	margin: 0 auto;
-	padding: 58px 0px 0px;
-    font-size:3em;
+	padding: 115px 0px 0px;
+    font-size:2.8em;
+    color: #1A0701;
 }
 .slogan h2 {
     margin: 0;
@@ -169,7 +169,7 @@ a{
     z-index: 10;
 	width: 262px;
 	margin: 0 auto;
-	padding: 35px 0px 0px;
+	padding: 10px 0px 0px;
 }
 
 
