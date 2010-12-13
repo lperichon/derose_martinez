@@ -18,7 +18,12 @@
                     <div style="float:left"><input class="request-textfield georgia" name="email"
                                                    id="Subscriber_email" type="text" value=""></div>
                     <div class="league-gothic" style="float:left">
-                        <a href="#" onclick="$('#contact_form').submit();"><span class="submit button center">Enviar</span><span class="submit button right"></span></a>
+                        <a href="#" onclick="$.ajax({
+                                                type:'post',
+                                                dataType: 'script',
+                                                data: $('#contact_form').serialize(),
+                                                url: $('#contact_form').attr('action')
+                                               });"><span class="submit button center">Enviar</span><span class="submit button right"></span></a>
                     </div>
                 </div>
             </form>

@@ -128,7 +128,6 @@ a{
 
 .top-right{
 	float: right;
-    font-weight: bold;
     font-variant:small-caps;
 }
 
@@ -140,12 +139,12 @@ a{
 
 .top-right div a{
 	color: #ffffff;
-	font-size: 14px;
+	font-size: 15px;
 	text-decoration: none;
 }
 
 .top-right div a:hover{
-	color: #66aab9;
+	color: #29d4c7;
 }
 
 .contact{
@@ -153,7 +152,7 @@ a{
 }
 
 .slogan {
-	width: 612px;
+	width: 615px;
     height: 80px;
 	margin: 0 auto;
 	padding: 115px 0px 0px;
@@ -207,7 +206,7 @@ a{
 
 .desc-title{
 	font-size: 36px;
-	color: #303030;
+	color: #1A0701;
 }
 
 .desc-about{
@@ -256,7 +255,7 @@ a{
 }
 
 .footer a{
-    color: #66aab9;
+    color: #29d4c7;
     text-decoration:none;
 }
 
@@ -329,7 +328,7 @@ a{
 }
 
 .footer-contact a{
-	color: #66aab9;
+	color: #29d4c7;
 	font-size: 14px;
 	line-height: 20px;
 	text-shadow: #111111 1px 1px 1px;
@@ -1478,7 +1477,7 @@ a:hover .atc-icon{
 
 .small.button.center{
     background: url("../images/button_center_27.png") repeat-x;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 27px;
     vertical-align: top;
     padding-top: 1px;

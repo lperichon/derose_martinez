@@ -42,20 +42,21 @@ class DeRoseMartinezApp < Sinatra::Base
 
     @message = params[:message]
 
-    Pony.mail :to => settings.email_address,
-              :from => params[:email],
-              :subject => 'Contacto Web',
-              :body =>  erb(:'email/contact', :layout => false),
-              :via => :smtp,
-              :via_options => {
-                  :address              => 'smtp.' + settings.email_service,
-                  :port                 => settings.email_port,
-                  :user_name            => settings.email_username,
-                  :password             => settings.email_password,
-                  :authentication       => :plain,
-                  :domain               => settings.email_domain
-              }
-    redirect '/success'
+    unless Sinatra::Application.development?
+      Pony.mail :to => settings.email_address,
+                :from => params[:email],
+                :subject => 'Contacto Web',
+                :body =>  erb(:'email/contact', :layout => false),
+                :via => :smtp,
+                :via_options => {
+                    :address              => 'smtp.' + settings.email_service,
+                    :port                 => settings.email_port,
+                    :user_name            => settings.email_username,
+                    :password             => settings.email_password,
+                    :authentication       => :plain,
+                    :domain               => settings.email_domain
+                }
+    end
   end
 
   get('/success') do
