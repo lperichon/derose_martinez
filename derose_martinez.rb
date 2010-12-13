@@ -61,4 +61,12 @@ class DeRoseMartinezApp < Sinatra::Base
   get('/success') do
     erb :success
   end
+
+  get('/swasthya-yoga') do
+    erb 'swasthya-yoga', :layout => :'page-layout'
+  end
+
+  get('/nosotros') do
+    erb 'nosotros', :layout => :'page-layout'
+  end
 end
