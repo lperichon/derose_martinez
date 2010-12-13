@@ -129,6 +129,7 @@ a{
 .top-right{
 	float: right;
     font-weight: bold;
+    font-variant:small-caps;
 }
 
 .top-right div{
@@ -524,6 +525,16 @@ a.view{
     float: left;
 }
 
+a.youtube{
+	background: url("../images/youtube.png") no-repeat;
+	width: 40px;
+	height: 40px;
+	text-indent: -9999px;
+	display: block;
+	outline: none;
+    margin: 5px 0px 0px 0px;
+}
+
 a.twitter{
 	background: url("../images/twitter.png") no-repeat;
 	width: 40px;
@@ -538,7 +549,7 @@ a.rss{
 	width: 40px;
 	height: 40px;
 	text-indent: -9999px;
-    margin: 5px 0px 0px 0px;
+    margin: 5px 0px 0px 10px;
 	display: block;
 	outline: none;
 }
