@@ -1,6 +1,6 @@
 body{
 	margin: 0;
-	background: #1A0701;
+	background: #1A0701 url("../images/bottom-background.png")
 }
 
 @font-face {
@@ -51,8 +51,8 @@ a{
 }
 
 .top-wrap-tour{
-	background: #000000 url("'../images/top-tour-background.png'");
-	height: 100px;
+	background: #000000 url("../images/bottom-background.png");
+	height: 50px;
 	width: 100%;
 	position: fixed;
 	top: 0;
