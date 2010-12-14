@@ -188,20 +188,30 @@ a{
 
 .desc-left{
 	float: left;
-	width: 410px;
-	margin: 0px 0px 0px 70px;
+	width: 300px;
+	margin: 0px 25px 0px 30px;
 }
+
+.desc-center {
+    width: 250px;
+    height: 250px;
+    float: left;
+    border: 1px solid black;
+    margin-top: 10px;
+}
+
 
 .desc-right{
 	float:left;
-    width: 410px;
-	margin: 0px 0px 0px 70px;
+    width: 300px;
+	margin: 0px 0px 0px 10px;
 }
 
 .desc-middle{
 	float: left;
 	width: 278px;
 	margin: 0px 0px 0px 20px;
+    text-align: center;
 }
 
 .desc-title{
