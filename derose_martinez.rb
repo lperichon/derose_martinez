@@ -17,7 +17,7 @@ class DeRoseMartinezApp < Sinatra::Base
   mime_type :woff, "application/octet-stream"
 
   get '/' do
-    erb :index
+    erb :index, :layout => :'page-layout'
   end
 
   get '/contact' do
