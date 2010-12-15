@@ -34,7 +34,7 @@
                 <div class="desc-metodo">
 
                     <div class="desc-middle">
-                        <div class="desc-title league-gothic">SwáSthya Yôga</div>
+                        <div id="title_slide_0" class="desc-title league-gothic">SwáSthya Yôga</div>
                         <div class="desc-about georgia">La sistematización del Yôga Antiguo, preclásico.</div>
                         <div class="masinfo"><a href="#" class="league-gothic"><span class="small button left"></span><span class="small button center">Más información</span><span class="small button right"></span></a></div>
                     </div>
@@ -44,7 +44,7 @@
                 <div class="sede">
 
                     <div class="desc-middle">
-                        <div class="desc-title league-gothic">Empresas</div>
+                        <div id="title_slide_2" class="desc-title league-gothic">Empresas</div>
                         <div class="desc-about georgia">Conocé nuestros servicios especializados para empresas y gimnasios.
                         </div>
                         <div class="masinfo"><a href="#" class="league-gothic"><span class="small button left"></span><span class="small button center">Más información</span><span class="small button right"></span></a></div>                    </div>
@@ -53,11 +53,19 @@
             </div>
             <script type="text/javascript">
             $(document).ready(function() {
+                // redefine Cycle's updateActivePagerLink function
+                $.fn.cycle.updateActivePagerLink = function(pager, currSlideIndex) {
+                    $('#title_slide_' + currSlideIndex).animate({ color: "#bab9b9" }, 800).animate({ color: "#000000" }, 1000);
+
+                };
                 $('.desc-center').cycle({
-                    fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+                    fx: 'fade',
+                    timeout: 3000,
+                    pager:  '#nav'
                 });
             });
             </script>
+            <div id="nav" style="display: none"></div>
             <div class='desc-center'>
               <img src="http://cloud.github.com/downloads/malsup/cycle/beach1.jpg" width="250" height="250" />
               <img src="http://cloud.github.com/downloads/malsup/cycle/beach2.jpg" width="250" height="250" />
@@ -68,7 +76,7 @@
                 <div class="desc-nosotros">
 
                     <div class="desc-middle">
-                        <div class="desc-title league-gothic">Nosotros</div>
+                        <div id="title_slide_1" class="desc-title league-gothic">Nosotros</div>
                         <div class="desc-about georgia">Conocenos un poco más. Quiénes somos, qué hacemos...</div>
                         <div class="masinfo"><a href="#" class="league-gothic"><span class="small button left"></span><span class="small button center">Más información</span><span class="small button right"></span></a></div>
                     </div>
@@ -78,7 +86,7 @@
                 <div class="desc-clases">
 
                     <div class="desc-middle">
-                        <div class="desc-title league-gothic">Clases particulares</div>
+                        <div id="title_slide_3" class="desc-title league-gothic">Clases particulares</div>
                         <div class="desc-about georgia">Ofrecemos clases particulares y a distancia. ¡Empeza a prácticar ahora!
                         </div>
                         <div class="masinfo"><a href="#" class="league-gothic"><span class="small button left"></span><span class="small button center">Más información</span><span class="small button right"></span></a></div>
