@@ -17,15 +17,21 @@ class DeRoseMartinezApp < Sinatra::Base
   mime_type :woff, "application/octet-stream"
 
   get '/' do
+    flash_message(params[:m])
+
     erb :index, :layout => :'page-layout'
   end
 
   get '/contact' do
+    flash_message(params[:m])
+
     erb(:contact, :layout => :'page-layout')
   end
 
   post '/contact' do
     require 'pony'
+
+    redirect request.url + "?m=email_blank" if params[:email].blank?
 
     @name = params[:name]
 
@@ -43,7 +49,8 @@ class DeRoseMartinezApp < Sinatra::Base
     @message = params[:message]
 
     unless Sinatra::Application.development?
-      Pony.mail :to => settings.email_address,
+      begin
+        Pony.mail :to => settings.email_address,
                 :from => params[:email],
                 :subject => 'Contacto Web',
                 :body =>  erb(:'email/contact', :layout => false),
@@ -56,9 +63,18 @@ class DeRoseMartinezApp < Sinatra::Base
                     :authentication       => :plain,
                     :domain               => settings.email_domain
                 }
+      rescue
+        @pony_error = true
+      end
+    end
+
+    if @pony_error
+      redirect request.url + "?m=email_invalid"
+    else
+      redirect request.url + "?m=success"
     end
   end
-
+                                                            error
   get('/success') do
     erb :success
   end
@@ -69,5 +85,21 @@ class DeRoseMartinezApp < Sinatra::Base
 
   get('/nosotros') do
     erb :'nosotros', :layout => :'page-layout'
+  end
+
+  helpers do
+
+    def flash_message(message)
+      case message
+      when "email_blank"
+        @notice = "Por favor, ingresá un email."
+      when "email_invalid"
+        @notice = "El formato del email es incorrecto"
+      when "success"
+        @success = "Gracias! Pronto estaremos en contacto con vos."
+      else ""
+      end
+    end
+
   end
 end
