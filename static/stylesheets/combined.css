@@ -97,6 +97,10 @@ a{
     padding-bottom: 50px;
 }
 
+.contact-wrap.particulares {
+    padding:0;
+}
+
 .top-wrap-contact{
 	background: #000000 url("'../images/top-tour-background.png'");
 	height: 67px;
