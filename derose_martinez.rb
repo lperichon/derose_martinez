@@ -83,6 +83,14 @@ class DeRoseMartinezApp < Sinatra::Base
     erb :'swasthya-yoga', :layout => :'page-layout'
   end
 
+  get('/clases-particulares') do
+    erb :'clases-particulares', :layout => :'page-layout'
+  end
+
+  get('/empresas') do
+    erb :'empresas', :layout => :'page-layout'
+  end
+
   get('/nosotros') do
     erb :'nosotros', :layout => :'page-layout'
   end
