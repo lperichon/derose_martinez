@@ -417,6 +417,10 @@ a{
 	margin: 0px 0px 0px 10px;
 }
 
+.contact-middle-margin p{
+	text-align: justify;
+}
+
 .contact-question{
 	font-size: 18px;
 	color: #303030;
