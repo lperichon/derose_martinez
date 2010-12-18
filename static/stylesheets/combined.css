@@ -19,8 +19,26 @@ body{
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'ProximaNovaRegular';
+	src: url(../fonts/proximanova-regular-webfont.eot);
+	src: local('☺'), url(../fonts/proximanova-regular-webfont.woff) format('woff'), url(../fonts/proximanova-regular-webfont.ttf) format('truetype'), url(../fonts/proximanova-regular-webfont.svg#webfontpbuFaM5l) format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 .proxima-nova-condensed {
 	font-family: "ProximaNovaCondensedRegular",Helvetica;
+}
+
+.proxima-nova {
+	font-family: "ProximaNovaRegular",Helvetica;
+}
+
+.tour-item {
+  font-family: "ProximaNovaRegular",Helvetica;
+  font-size: 14px;
+  color: #303030;
 }
 
 .georgia{
@@ -75,7 +93,7 @@ a{
 
 .contact-wrap{
 	background: #E9E9E9 url("../images/bottom-middle-background.png");
-	
+    padding-bottom: 50px;
 }
 
 .top-wrap-contact{
@@ -169,7 +187,7 @@ a{
 
 .contact-btn {
     z-index: 10;
-	width: 262px;
+	width: 264px;
 	margin: 0 auto;
 	padding: 10px 0px 0px;
 }
@@ -1426,7 +1444,7 @@ a:hover .atc-icon{
 
 .big.button.left{
     background: url("../images/button_left_89.png") no-repeat;
-    width:15px;
+    width:14px;
 }
 
 .big.button.center{
@@ -1441,8 +1459,8 @@ a:hover .atc-icon{
 }
 
 .big.button.right{
-    background: url("../images/button_right_89.png") no-repeat;
-    width:15px;
+    background: url("../images/button_right_89.png") no-repeat top right;
+    width:14px;
 }
 
 
@@ -1461,8 +1479,8 @@ a:hover .atc-icon{
 }
 
 .submit.button.right{
-    background: url("../images/button_right_51.png") no-repeat;
-    width:9px;
+    background: url("../images/button_right_51.png") no-repeat top right;
+    width:8px;
 }
 
 .medium.button {
@@ -1471,7 +1489,7 @@ a:hover .atc-icon{
 
 .medium.button.left{
     background: url("../images/button_left_42.png") no-repeat;
-    width:5px;
+    width:4px;
 }
 
 .medium.button.center{
@@ -1486,8 +1504,8 @@ a:hover .atc-icon{
 }
 
 .medium.button.right{
-    background: url("../images/button_right_42.png") no-repeat;
-    width:5px;
+    background: url("../images/button_right_42.png") no-repeat top right;
+    width:4px;
 }
 
 
@@ -1512,6 +1530,6 @@ a:hover .atc-icon{
 }
 
 .small.button.right{
-    background: url("../images/button_right_27.png") no-repeat;
+    background: url("../images/button_right_27.png") no-repeat top right;
     width:3px;
 }
