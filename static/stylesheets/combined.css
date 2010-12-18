@@ -39,6 +39,7 @@ body{
   font-family: "ProximaNovaRegular",Helvetica;
   font-size: 14px;
   color: #303030;
+  text-align: justify;
 }
 
 .georgia{
@@ -139,6 +140,7 @@ a{
 	margin:0 auto;
 	position:relative;
 	width:960px;
+    background: url("../images/bottom-background.png") repeat scroll 0 0 transparent;
 }
 
 .logo{
@@ -1062,7 +1064,7 @@ a:hover .atc-icon{
 .side-tour-nav{
 	width: 220px;
 	position: fixed;
-	margin:40px 0px 0px 100px;
+	margin:0px 0px 0px 100px;
 }
 
 .stn-middle{
