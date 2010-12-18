@@ -411,6 +411,9 @@ a{
 	width: 530px;
     margin: 0 auto;
     padding-top: 60px;
+    font-family: "ProximaNovaRegular",Helvetica;
+    font-size: 14px;
+    color: #303030;
 }
 
 .contact-middle-margin{
