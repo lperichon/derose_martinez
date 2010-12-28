@@ -19,16 +19,21 @@ class DeRoseMartinezApp < Sinatra::Base
   get '/' do
     flash_message(params[:m])
 
+    @description = "¿Ya invertiste en vos mismo hoy? Calidad de vida, administración del stress, fuerza, flexibilidad y cultura."
+
     erb :index, :layout => :'page-layout'
   end
 
-  get '/contact' do
+  get '/contacto' do
     flash_message(params[:m])
 
-    erb(:contact, :layout => :'page-layout')
+    @page_title = "Contacto"
+    @description = "Contactános para recibir más información."
+
+    erb(:contacto, :layout => :'page-layout')
   end
 
-  post '/contact' do
+  post '/contacto' do
     require 'pony'
 
     redirect request.url + "?m=email_blank" if params[:email].blank?
@@ -53,7 +58,7 @@ class DeRoseMartinezApp < Sinatra::Base
         Pony.mail :to => settings.email_address,
                 :from => params[:email],
                 :subject => 'Contacto Web',
-                :body =>  erb(:'email/contact', :layout => false),
+                :body =>  erb(:'email/contacto', :layout => false),
                 :via => :smtp,
                 :via_options => {
                     :address              => 'smtp.' + settings.email_service,
@@ -74,24 +79,32 @@ class DeRoseMartinezApp < Sinatra::Base
       redirect request.url + "?m=success"
     end
   end
-                                                            error
-  get('/success') do
-    erb :success
-  end
 
   get('/swasthya-yoga') do
+    @page_title = "SwáSthya Yôga"
+    @description = "SwáSthya Yôga es el nombre de la sistematización del Yôga Antiguo, Preclásico."
+
     erb :'swasthya-yoga', :layout => :'page-layout'
   end
 
   get('/clases-particulares') do
+    @page_title = "Clases particulares"
+    @description = "Ofrecemos clases particulares."
+
     erb :'clases-particulares', :layout => :'page-layout'
   end
 
   get('/empresas') do
+    @page_title = "Empresas"
+    @description = "Nuestro servicio para empresas y gimnasios."
+
     erb :'empresas', :layout => :'page-layout'
   end
 
   get('/nosotros') do
+    @page_title = "Nosotros"
+    @description = "Conocenos un poco más."
+
     erb :'nosotros', :layout => :'page-layout'
   end
 
