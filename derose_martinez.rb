@@ -20,6 +20,7 @@ class DeRoseMartinezApp < Sinatra::Base
     flash_message(params[:m])
 
     @description = "¿Ya invertiste en vos mismo hoy? Calidad de vida, administración del stress, fuerza, flexibilidad y cultura."
+    @keywords = "yoga, martinez, yoga en martinez, swasthya, clases de yoga"
 
     erb :index, :layout => :'page-layout'
   end
