@@ -2,32 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
       <loc>http://yogaenmartinez.com.ar/</loc>
-      <changefreq>monthly</changefreq>
-      <priority>0.9</priority>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
    </url>
    <url>
       <loc>http://yogaenmartinez.com.ar/swasthya-yoga</loc>
-      <changefreq>monthly</changefreq>
+      <changefreq>weekly</changefreq>
       <priority>0.8</priority>
    </url>
    <url>
       <loc>http://yogaenmartinez.com.ar/nosotros</loc>
-      <changefreq>monthly</changefreq>
+      <changefreq>weekly</changefreq>
       <priority>0.8</priority>
    </url>
    <url>
       <loc>http://yogaenmartinez.com.ar/clases-particulares</loc>
-      <changefreq>monthly</changefreq>
+      <changefreq>weekly</changefreq>
       <priority>0.8</priority>
    </url>
    <url>
       <loc>http://yogaenmartinez.com.ar/empresas</loc>
-      <changefreq>monthly</changefreq>
+      <changefreq>weekly</changefreq>
       <priority>0.8</priority>
    </url>
    <url>
       <loc>http://yogaenmartinez.com.ar/contacto</loc>
-      <changefreq>monthly</changefreq>
+      <changefreq>weekly</changefreq>
       <priority>0.8</priority>
    </url>
 </urlset>
