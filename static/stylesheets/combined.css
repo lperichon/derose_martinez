@@ -238,6 +238,7 @@ a{
 	width: 278px;
 	margin: 0px 0px 0px 20px;
     text-align: center;
+    overflow: hidden;
 }
 
 .desc-title{
