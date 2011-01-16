@@ -9,7 +9,7 @@ class DeRoseMartinezApp < Sinatra::Base
   set :email_username, ENV['SENDGRID_USERNAME']
   set :email_password, ENV['SENDGRID_PASSWORD']
   set :email_port, '587'
-  set :email_address, 'natalia.sanmartin@gmail.com'
+  set :email_address, 'info@yogaenmartinez.com.ar'
   set :email_service, 'sendgrid.net'
   set :email_domain, ENV['SENDGRID_DOMAIN']
 
