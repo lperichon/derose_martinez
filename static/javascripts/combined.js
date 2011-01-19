@@ -12,7 +12,7 @@ $(document).ready(function() {
             if (scrollOffset >= (anchor.offset().top) - 160) {
                 if (scrollOffset <= ((anchor.offset().top + anchor.outerHeight(true)) - 160)) {
                     $('.side-tour-nav div.stn-middle-solid').removeClass('stn-middle-selected');
-                    $('.side-tour-nav a[href="#' + k + '"]').parent().addClass('stn-middle-selected');
+                    $('.side-tour-nav a[href="#' + k + '"]').first().parent().addClass('stn-middle-selected');
                     return;
                 }
             }
