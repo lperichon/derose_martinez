@@ -109,8 +109,13 @@ class DeRoseMartinezApp < Sinatra::Base
     erb :'nosotros', :layout => :'page-layout'
   end
 
-  helpers do
+  post('/facebook') do
+    #ensure_facebook_request!('183431315036552', '4c7869fb2bcd85f159bacf1dc78d3034')
+    #@fan = @facebook_params[:page][:liked]
+    erb :'facebook', :layout => :'fb-layout'
+  end
 
+  helpers do
     def flash_message(message)
       case message
       when "email_blank"

@@ -1,0 +1,62 @@
+body {
+    width: 520px;
+}
+
+.top {
+    width: 520px;
+}
+
+.top-right {
+    float: none;
+    margin-left: 20px;
+}
+
+.top-right div {
+    padding: 0 17px 0 0;
+}
+
+.contact-btn {
+    width: 260px;
+}
+
+.contact-btn img {
+    width: 80px;
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-right: 20px;
+}
+
+.slogan {
+    width: 520px;
+    text-align: center;
+    padding: 45px 0px 0px;
+}
+
+.slogan h2 {
+    font-size: 1.2em;
+}
+
+.top-middle-wrap {
+    height: 180px;
+}
+
+.top-middle {
+    width: 520px;
+}
+
+.bottom-middle-wrap {
+    height: 670px;
+}
+
+#fb_invite_wrapper {
+    height: 500px;
+    padding-left: 10px;
+}
+
+.bottom-middle {
+    width: 520px;
+}
+
+.footer {
+    width: 520px;
+}

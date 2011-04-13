@@ -1,0 +1,46 @@
+<div class="top-middle-wrap">
+    <div class="top-middle">
+        <div class="slogan league-gothic">
+            <h2>¿Ya invertiste en vos mismo hoy?</h2>
+        </div>
+        <div class="contact-btn league-gothic">
+            <a href="/contacto"><span class="big button left"></span><span class="big button center">Contactános</span><span class="big button right"></span></a>
+        </div>
+    </div>
+</div>
+
+<div class="bottom-middle-wrap">
+    <div class="bottom-middle">
+        <div class="request-form">
+            <div class="request-text georgia">Ingresá tu e-mail para recibir más información (¡No hacemos spam!)</div>
+            <div class="error request-text" style="margin-top: 5px; color: red;"><%= @notice %></div>
+            <div class="success request-text" style="margin-top: 5px; color: green;"><%= @success %></div>
+            <form action="/contacto" method="post" id="contact_form">
+                <div style="margin: 10px 0px 0px;">
+                    <div style="float:left"><input class="request-textfield georgia" name="email"
+                                                   id="Subscriber_email" type="text" value=""></div>
+                    <div class="league-gothic" style="float:left">
+                        <a rel="nofollow" href="#" onclick="$('#contact_form').submit();"><span class="submit button center">Enviar</span><span class="submit button right"></span></a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="fb_invite_wrapper">
+              <fb:serverfbml width="500">
+
+                 <script type="text/fbml">
+
+                   <fb:request-form action="http://www.facebook.com/pages/Sw%C3%A1Sthya-Y%C3%B4ga-Martinez/131942976866386" method="POST" invite="true"
+
+                                  type="Swásthya Yôga Martínez" content="Invitá a tus amigos. <fb:req-choice url='http://www.facebook.com/pages/Sw%C3%A1Sthya-Y%C3%B4ga-Martinez/131942976866386' label='Binkd Label' />">
+
+                              <fb:multi-friend-selector email_invite="false" import_external_friends="false" showborder="false" bypass="cancel" cols=3  actiontext="Invitá a tus amigos a conocernos"/>
+
+                    </fb:request-form>
+
+                </script>
+
+            </fb:serverfbml>
+        </div>
+    </div>
+</div>
