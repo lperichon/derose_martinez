@@ -37,8 +37,8 @@ class DeRoseMartinezApp < Sinatra::Base
   post '/contacto' do
     require 'pony'
 
-    redirect request.url + "?m=email_blank" if params[:email].blank?
-
+    redirect request.referer + (request.referer.include?('?') ? '&' : '?') + "m=email_blank" if params[:email].blank?
+    @fb = params[:fb]
     @name = params[:name]
 
     @from = ""
@@ -75,9 +75,9 @@ class DeRoseMartinezApp < Sinatra::Base
     end
 
     if @pony_error
-      redirect request.url + "?m=email_invalid"
+      redirect request.referer + (request.referer.include?('?') ? '&' : '?') + "m=email_invalid"
     else
-      redirect request.url + "?m=success"
+      redirect request.referer + (request.referer.include?('?') ? '&' : '?') + "m=success"
     end
   end
 
@@ -109,7 +109,17 @@ class DeRoseMartinezApp < Sinatra::Base
     erb :'nosotros', :layout => :'page-layout'
   end
 
+  get('/facebook') do
+    #require 'sinatra-facebook-signed-request'
+    #ensure_facebook_request!('183431315036552', '4c7869fb2bcd85f159bacf1dc78d3034')
+    #@fan = @facebook_params[:page][:liked]
+
+    flash_message(params[:m])
+    erb :'facebook', :layout => :'fb-layout'
+  end
+
   post('/facebook') do
+    #require 'sinatra-facebook-signed-request'
     #ensure_facebook_request!('183431315036552', '4c7869fb2bcd85f159bacf1dc78d3034')
     #@fan = @facebook_params[:page][:liked]
     erb :'facebook', :layout => :'fb-layout'
