@@ -59,7 +59,8 @@ body {
 }
 
 .bottom-middle-wrap {
-    height: 850px;
+    height: 650px;
+    overflow: hidden;
 }
 
 #fb_invite_wrapper {
@@ -117,7 +118,8 @@ body {
 
 	.fan_box .connections_grid .grid_item .name {
 		color: black;
-		font-size: 11px;
+		font-size: 9px;
+        font-family: Georgia;
 	}
 	.fan_box .profileimage {
 		margin: 0;
