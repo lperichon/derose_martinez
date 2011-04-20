@@ -115,6 +115,9 @@ body {
 		font: 27px League Gothic;
 		text-align: center;
 	}
+        .fan_box .connections .total_plus b {
+            font-weight: lighter;
+        }
 
 	.fan_box .connections_grid .grid_item .name {
 		color: black;
