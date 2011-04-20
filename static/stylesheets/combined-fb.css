@@ -101,8 +101,7 @@ body {
 				box-shadow: 0px 3px 10px #333; -moz-box-shadow: 0px 3px 10px #333; -webkit-box-shadow: 0px 3px 10px #333;
 			}
 	.fan_box .full_widget .connect_top {
-		background: url(http://line25.com/wp-content/uploads/2010/facebook/demo/images/blue.png);
-		border-radius: 6px; -moz-border-radius: 6px; -webkit-border-radius: 6px;
+		display: none;
 	}
 	.fan_box .connections .connections_grid {
 		padding-top:16px;
