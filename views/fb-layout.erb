@@ -27,6 +27,75 @@
     })();
   </script>
   <% end %>
+
+  <script type="text/javascript">
+$(document).ready(function()
+    {
+       	// $.post("http://getbadg.es/metrics/metric/badges_free/816/num_views");
+    });
+
+function publish()
+  {
+	var publish_id=Math.floor(Math.random()*1000000000);
+	var url = 'http://www.facebook.com/apps/application.php?id=164368923621187&sk=app_164368923621187';
+	var picture = 'http://getbadg.es/static/img/uploadify/uploads/badges/logo-martinez.png';
+	var name = "Publicá SwáSthya Yôga Martínez en tu perfil";
+	var description = "Ayudanos a difundir esta maravillosa cultura!";
+	var actionLinks = [{ 'text': 'Publicar en mi perfil', 'href': url }];
+	var properties = '';
+
+	FB.ui({
+		'method': 'feed',
+		'name':name,
+		'link' : url,
+		'properties':  properties,
+		//'picture' : picture,
+		'caption' :' ' ,
+		'description' : description,
+		'properties': {'Post #':'0'},
+		'action_links': actionLinks }, function(response){
+		  if (response == null || response == undefined || response == false) {
+		  } else {
+			  //$.post("http://getbadg.es/metrics/metric/badges_free/816/num_posts");
+
+		  }
+			fbInvite();
+		}
+      );
+}
+    </script>
+    <script type="text/javascript">
+
+    function invite(){
+        if(jQuery.browser.safari){
+            $('#badge_content').hide();
+            $('#request_content').show();
+        } else {
+            fbInvite();
+        }
+    }
+    function fbInvite(){
+    //  $.post('http://momentusmedia.com/metric.php?name=nb_816_request_show');
+        FB.ui({ method: 'apprequests',
+                message: 'Ayudános a difundir esta maravillosa cultura!',
+          title: 'Invitá a tus amigos',
+          data: '816'
+          }, function(response){
+            if (response != null && response != undefined && response != false) {
+              //$.post('http://getbadg.es/metrics/saverequests', {'request_ids':response.request_ids, 'data':{'redirect_url':'http://www.facebook.com/pages/Sw%C3%A1Sthya-Y%C3%B4ga-Martinez/131942976866386?sk=app_170192649677445'}});
+              //$.post('http://momentusmedia.com/metric.php?name=nb_816_request_success_'+response.request_ids.length);
+            } else {
+              //$.post('http://momentusmedia.com/metric.php?name=nb_816_request_skip');
+            }
+            //$.post('http://momentusmedia.com/metric.php?name=nb_816_like_show');
+            $('#badge_content').hide();
+            $('#request_content').hide();
+            $('#like_content').show();
+            $('#like_text').show();
+        });
+    }
+
+    </script>
 </head>
 <body>
 
@@ -41,13 +110,23 @@
   <%= erb(:'partials/fb-footer', :layout => false) %>
 </div>
 <div id="fb-root"></div>
+
 <script>
 	window.fbAsyncInit = function() {
-		FB.init({appId: "183431315036552",
+		//FB.init({appId: "183431315036552",
+        FB.init({appId: "164368923621187",
                            status: true,
                            cookie: true,
                            xfbml: true});
-		FB.Canvas.setSize();
+        window.setTimeout(function() {
+          FB.Canvas.setAutoResize();
+        }, 250);
+		//FB.Canvas.setSize();
+
+        FB.Event.subscribe('edge.create', function(href, widget) {
+          // Do something, e.g. track the click on the "Like" button here
+          publish();
+        });
 	};
 	(function() {
 		var e = document.createElement('script'); e.async = true;
@@ -56,6 +135,5 @@
 		document.getElementById('fb-root').appendChild(e);
 	}());
 </script>
-
 </body>
 </html>

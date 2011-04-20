@@ -1,14 +1,14 @@
+<div id="badge_content2" style="display:none;">
 <div class="top-middle-wrap">
     <div class="top-middle">
         <div class="slogan league-gothic">
-            <h2>¿Ya invertiste en vos mismo hoy?</h2>
+            <h2>Descarga nuestros libros gratuitos<br/>¡Conocé nuestra cultúra!</h2>
         </div>
         <div class="contact-btn league-gothic">
-            <a href="/contacto"><span class="big button left"></span><span class="big button center">Contactános</span><span class="big button right"></span></a>
+            <a onclick="$('#badge_content').hide();$('#badge_content2').show();"><span class="big button left"></span><span class="big button center">Conocenos</span><span class="big button right"></span></a>
         </div>
     </div>
 </div>
-
 <div class="bottom-middle-wrap">
     <div class="bottom-middle">
         <div class="request-form">
@@ -26,22 +26,68 @@
                 </div>
             </form>
         </div>
-        <div id="fb_invite_wrapper">
-              <fb:serverfbml width="500">
+        <fb:like></fb:like>
+    </div>
+</div>
+</div>
+<div id="badge_content">
+<div class="top-middle-wrap">
+    <div class="top-middle">
+        <div class="slogan league-gothic">
+            <h2>¿Qué hiciste por vos hoy?</h2>
+        </div>
+        <img src="/images/todo.gif"/>
+    </div>
+</div>
 
-                 <script type="text/fbml">
-
-                   <fb:request-form action="http://www.facebook.com/pages/Sw%C3%A1Sthya-Y%C3%B4ga-Martinez/131942976866386" method="POST" invite="true"
-
-                                  type="Swásthya Yôga Martínez" content="Invitá a tus amigos. <fb:req-choice url='http://www.facebook.com/pages/Sw%C3%A1Sthya-Y%C3%B4ga-Martinez/131942976866386' label='Binkd Label' />">
-
-                              <fb:multi-friend-selector email_invite="false" import_external_friends="false" showborder="false" bypass="cancel" cols=3  actiontext="Invitá a tus amigos a conocernos"/>
-
-                    </fb:request-form>
-
-                </script>
-
-            </fb:serverfbml>
+<div class="bottom-middle-wrap">
+    <div class="bottom-middle">
+        <div class="request-form">
+            <div class="request-text georgia">Ingresá tu e-mail para recibir más información (¡No hacemos spam!)</div>
+            <div class="error request-text" style="margin-top: 5px; color: red;"><%= @notice %></div>
+            <div class="success request-text" style="margin-top: 5px; color: green;"><%= @success %></div>
+            <form action="/contacto" method="post" id="contact_form2">
+                <div style="margin: 10px 0px 0px;">
+                    <input type="hidden" name="fb" value="true"/>
+                    <div style="float:left"><input class="request-textfield georgia" name="email"
+                                                   id="Subscriber_email2" type="text" value=""></div>
+                    <div class="league-gothic" style="float:left">
+                        <a rel="nofollow" href="#" onclick="$('#contact_form').submit();"><span class="submit button center">Enviar</span><span class="submit button right"></span></a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="like_button">
+        <fb:like show_faces="false" layout="box_count"></fb:like>
+        </div>
+        <fb:fan profile_id="119754924730147"  stream="false" connections="18" width="403" height="360" css="http://yogaenmartinez.com.ar/stylesheets/combined-fb.css?5"></fb:fan>
+    </div>
+</div>
+</div>
+<div id="request_content" style="display:none;">
+    <div class="top-middle-wrap">
+    <div class="top-middle">
+        <div class="slogan league-gothic">
+            <h2>¡Gracias!<br>¡Invitá a tus amigos a que nos conozcan!</h2>
         </div>
     </div>
+    </div>
+</div>
+
+<div id="like_content" style="display:none;">
+  <div class="top-middle-wrap">
+    <div class="top-middle">
+        <div class="slogan league-gothic">
+            <h2>¡Gracias por ayudarnos a difundir esta maravillosa cultura!</h2>
+        </div>
+        <div class="contact-btn league-gothic">
+            <a href="http://yogaenmartinez.com.ar" target="_blank"><span class="big button left"></span><span class="big button center">Visitános</span><span class="big button right"></span></a>
+        </div>
+    </div>
+    </div>
+  <div class="bottom-middle-wrap">
+    <div class="bottom-middle">
+      <fb:like></fb:like>
+    </div>
+</div>
 </div>

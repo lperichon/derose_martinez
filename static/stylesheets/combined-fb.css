@@ -1,8 +1,13 @@
 body {
     width: 520px;
+    margin: 0 auto;
 }
 
 .top {
+    width: 520px;
+}
+
+.top-wrap-tour {
     width: 520px;
 }
 
@@ -17,6 +22,11 @@ body {
 
 .contact-btn {
     width: 260px;
+    padding: 80px 0px 0px;
+}
+
+#like_content .contact-btn {
+    width: 350px;
 }
 
 .contact-btn img {
@@ -37,7 +47,11 @@ body {
 }
 
 .top-middle-wrap {
-    height: 180px;
+    height: 280px;
+}
+
+#like_content .top-middle-wrap {
+    height: 250px;
 }
 
 .top-middle {
@@ -64,3 +78,51 @@ body {
 .footer-left {
     margin: 45px 0 0 37px;
 }
+
+.like_button {
+    width: 78px;
+    margin: 0 auto;
+}
+
+.fanbox {
+	width: 403px; margin: 0 auto;
+}
+
+.fan_box .full_widget {
+		background: none; border: none;
+	}
+	.fan_box .connections_grid .grid_item {
+		padding: 0 8px 10px 8px;
+	}
+		.fan_box .connections_grid .grid_item a img {
+			box-shadow: 0px 0px 10px #333; -moz-box-shadow: 0px 0px 10px #333; -webkit-box-shadow: 0px 0px 10px #333;
+		}
+			.fan_box .connections_grid .grid_item a:hover img {
+				box-shadow: 0px 3px 10px #333; -moz-box-shadow: 0px 3px 10px #333; -webkit-box-shadow: 0px 3px 10px #333;
+			}
+	.fan_box .full_widget .connect_top {
+		background: url(http://line25.com/wp-content/uploads/2010/facebook/demo/images/blue.png);
+		border-radius: 6px; -moz-border-radius: 6px; -webkit-border-radius: 6px;
+	}
+	.fan_box .connections .connections_grid {
+		padding-top:16px;
+	}
+	.fan_box .connections {
+		border-top: none;
+		padding:15px 0 0;
+		color: #ccc;
+		font: italic 21px Georgia;
+		text-align: center;
+		text-shadow: 0px 1px 4px #000;
+	}
+		.fan_box .connections span.total {
+			color: #fff;
+		}
+
+	.fan_box .connections_grid .grid_item .name {
+		color: #ccc;
+		font-size: 11px;
+	}
+	.fan_box .profileimage {
+		margin: 0;
+	}
