@@ -80,8 +80,9 @@ body {
 }
 
 .like_button {
-    width: 78px;
+    width: 80px;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 .fanbox {
