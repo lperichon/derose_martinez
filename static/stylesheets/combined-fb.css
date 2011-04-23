@@ -25,6 +25,10 @@ body {
     padding: 80px 0px 0px;
 }
 
+#badge_content .contact-btn {
+    padding-top: 20px;
+}
+
 #like_content .contact-btn {
     width: 350px;
 }
@@ -46,8 +50,8 @@ body {
     font-size: 1.2em;
 }
 
-.top-middle-wrap {
-    height: 280px;
+#badge_content .top-middle-wrap {
+    height: 190px;
 }
 
 #like_content .top-middle-wrap {
