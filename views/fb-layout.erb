@@ -36,11 +36,12 @@ $(document).ready(function()
 
 function publish()
   {
-	var publish_id=Math.floor(Math.random()*1000000000);
 	var url = 'http://www.facebook.com/apps/application.php?id=164368923621187&sk=app_164368923621187';
-	var picture = 'http://getbadg.es/static/img/uploadify/uploads/badges/logo-martinez.png';
-	var name = "Publicá SwáSthya Yôga Martínez en tu perfil";
-	var description = "Ayudanos a difundir esta maravillosa cultura!";
+	var picture = 'http://yogaenmartinez.com.ar/images/logo-martinez.png';
+	var name = "SwáSthya Yôga Martínez";
+    var caption = "¿Qué hiciste por vos hoy?";
+	var description = "Clases de Yôga en Martinez, calidad de vida, administración del stress, fuerza, flexibilidad y cultura.";
+    var message = "¡Visiten el sitio de SwáSthya Yôga Martínez!";
 	var actionLinks = [{ 'text': 'Publicar en mi perfil', 'href': url }];
 	var properties = '';
 
@@ -49,10 +50,10 @@ function publish()
 		'name':name,
 		'link' : url,
 		'properties':  properties,
-		//'picture' : picture,
-		'caption' :' ' ,
+		'picture' : picture,
+		'caption' : caption,
 		'description' : description,
-		'properties': {'Post #':'0'},
+		'message' : message,
 		'action_links': actionLinks }, function(response){
 		  if (response == null || response == undefined || response == false) {
 		  } else {
@@ -77,9 +78,8 @@ function publish()
     function fbInvite(){
     //  $.post('http://momentusmedia.com/metric.php?name=nb_816_request_show');
         FB.ui({ method: 'apprequests',
-                message: 'Ayudános a difundir esta maravillosa cultura!',
-          title: 'Invitá a tus amigos',
-          data: '816'
+                message: '¡Visitá el sitio de SwáSthya Yôga Martínez!',
+          title: '¡Invitá a tus amigos a que nos conozcan!'
           }, function(response){
             if (response != null && response != undefined && response != false) {
               //$.post('http://getbadg.es/metrics/saverequests', {'request_ids':response.request_ids, 'data':{'redirect_url':'http://www.facebook.com/pages/Sw%C3%A1Sthya-Y%C3%B4ga-Martinez/131942976866386?sk=app_170192649677445'}});
