@@ -36,12 +36,12 @@ $(document).ready(function()
 
 function publish()
   {
-	var url = 'https://www.facebook.com/pages/SwáSthya-Yôga-Martinez/131942976866386';
+	var url = 'https://www.facebook.com/SwaSthyaEnMartinez';
 	var picture = 'http://yogaenmartinez.com.ar/images/logo-martinez.png';
-	var name = "SwáSthya Yôga Martínez";
+	var name = "SwáSthya en Martínez";
     var caption = "¿Qué hiciste por vos hoy?";
-	var description = "Clases de Yôga en Martinez, calidad de vida, administración del stress, fuerza, flexibilidad y cultura.";
-    var message = "¡Visiten el sitio de SwáSthya Yôga Martínez!";
+	var description = "Clases de SwáSthya en Martinez, calidad de vida, administración del stress, fuerza, flexibilidad y cultura.";
+    var message = "¡Visiten el sitio de SwáSthya Martínez!";
 	var actionLinks = [{ 'text': 'Publicar en mi perfil', 'href': url }];
 	var properties = '';
 
@@ -78,7 +78,7 @@ function publish()
     function fbInvite(){
     //  $.post('http://momentusmedia.com/metric.php?name=nb_816_request_show');
         FB.ui({ method: 'apprequests',
-                message: '¡Visitá el sitio de SwáSthya Yôga Martínez!',
+                message: '¡Visitá el sitio de SwáSthya Martínez!',
           title: '¡Invitá a tus amigos a que nos conozcan!'
           }, function(response){
             if (response != null && response != undefined && response != false) {

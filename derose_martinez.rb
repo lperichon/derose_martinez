@@ -81,11 +81,11 @@ class DeRoseMartinezApp < Sinatra::Base
     end
   end
 
-  get('/swasthya-yoga') do
-    @page_title = "SwáSthya Yôga"
-    @description = "SwáSthya Yôga es el nombre de la sistematización del Yôga Antiguo, Preclásico."
+  get('/swasthya') do
+    @page_title = "SwáSthya"
+    @description = "SwáSthya es el nombre de la sistematización del Yôga Antiguo, Preclásico."
 
-    erb :'swasthya-yoga', :layout => :'page-layout'
+    erb :'swasthya', :layout => :'page-layout'
   end
 
   get('/clases-particulares') do
