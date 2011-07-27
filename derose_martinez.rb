@@ -19,8 +19,8 @@ class DeRoseMartinezApp < Sinatra::Base
   get '/' do
     flash_message(params[:m])
 
-    @description = "¿Qué hiciste por vos hoy? Clases de Yoga en Martinez, calidad de vida, administración del stress, fuerza, flexibilidad y cultura."
-    @keywords = "yoga, martinez, yoga en martinez, swasthya, clases de yoga"
+    @description = "¿Qué hiciste por vos hoy? Clases de Swásthya en Martinez, calidad de vida, administración del stress, fuerza, flexibilidad y cultura."
+    @keywords = "swásthya, martinez, swásthya en martinez, swasthya, clases de swásthya"
 
     erb :index, :layout => :'page-layout'
   end
