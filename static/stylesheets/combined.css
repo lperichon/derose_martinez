@@ -999,6 +999,7 @@ a:hover .atc-icon{
 .tour{
 	width: 960px;
 	margin: 0 auto;
+    overflow: auto;
 }
 
 .tour-left{
