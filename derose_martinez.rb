@@ -69,6 +69,20 @@ class DeRoseMartinezApp < Sinatra::Base
                     :authentication       => :plain,
                     :domain               => settings.email_domain
                 }
+
+        Pony.mail :to => params[:email],
+                :from => settings.email_address,
+                :subject => 'Gracias por visitar YôgaenMartinez.com.ar',
+                :body =>  erb(:'email/infomail', :layout => false),
+                :via => :smtp,
+                :via_options => {
+                    :address              => 'smtp.' + settings.email_service,
+                    :port                 => settings.email_port,
+                    :user_name            => settings.email_username,
+                    :password             => settings.email_password,
+                    :authentication       => :plain,
+                    :domain               => settings.email_domain
+                }
       rescue
         @pony_error = true
       end
