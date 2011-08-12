@@ -73,6 +73,7 @@ class DeRoseMartinezApp < Sinatra::Base
         Pony.mail :to => params[:email],
                 :from => settings.email_address,
                 :subject => 'Gracias por visitar YôgaenMartinez.com.ar',
+                :headers => { 'Content-Type' => 'text/html' },
                 :body =>  erb(:'email/infomail', :layout => false),
                 :via => :smtp,
                 :via_options => {
