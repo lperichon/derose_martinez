@@ -4,7 +4,7 @@
             <h2>¡Empezá a practicar hoy!</h2>
         </div>
         <div class="contact-btn league-gothic">
-            <a href="/contacto"><span class="big button left"></span><span class="big button center">Contactános</span><span class="big button right"></span></a>
+            <a href="/contacto"><span class="big button">Contactános</span></a>
         </div>
     </div>
 </div>
@@ -16,83 +16,83 @@
             <div class="error request-text" style="margin-top: 5px; color: red;"><%= @notice %></div>
             <div class="success request-text" style="margin-top: 5px; color: green;"><%= @success %></div>
             <form action="/contacto" method="post" id="contact_form">
-                <div style="margin: 10px 0px 0px;">
+                <div style="margin: 15px 0px 0px;">
                     <div style="float:left"><input class="request-textfield georgia" name="email"
                                                    id="Subscriber_email" type="text" value=""></div>
-                    <div class="league-gothic" style="float:left">
-                        <a rel="nofollow" href="#" onclick="$('#contact_form').submit();"><span class="submit button center">Enviar</span><span class="submit button right"></span></a>
+                    <div class="league-gothic submit_button_wrapper">
+                        <a rel="nofollow" href="#" onclick="$('#contact_form').submit();"><span class="submit button">Enviar</span></a>
                     </div>
                 </div>
             </form>
         </div>
         <div class="clear"></div>
-        <div class="desc">
-            <div class="desc-left">
-                <div class="desc-metodo">
 
-                    <div class="desc-middle">
-                        <div id="title_slide_0" class="desc-title league-gothic">SwáSthya</div>
-                        <div class="desc-about georgia">La sistematización del<br />Yôga Antiguo, preclásico.</div>
-                        <div class="masinfo"><a href="/swasthya" class="league-gothic"><span class="small button left"></span><span class="small button center">Más información</span><span class="small button right"></span></a></div>
-                    </div>
-
-                </div>
-                <div class="clear"></div>
-                <div class="sede">
-
-                    <div class="desc-middle">
-                        <div id="title_slide_2" class="desc-title league-gothic">Empresas</div>
-                        <div class="desc-about georgia">Conocé nuestros servicios especializados para empresas y gimnasios.
-                        </div>
-                        <div class="masinfo"><a href="/empresas" class="league-gothic"><span class="small button left"></span><span class="small button center">Más información</span><span class="small button right"></span></a></div>                    </div>
-
-                </div>
-            </div>
-            <script type="text/javascript">
-            $(document).ready(function() {
-                // redefine Cycle's updateActivePagerLink function
-                $.fn.cycle.updateActivePagerLink = function(pager, currSlideIndex) {
-                    $('#title_slide_' + currSlideIndex).animate({ color: "#bab9b9" }, 800).animate({ color: "#000000" }, 1000);
-
-                };
-                $('.desc-center').cycle({
-                    fx: 'fade',
-                    timeout: 4000,
-                    speedIn: 2500,
-                    speedOut: 2500,
-                    pager:  '#nav'
-                });
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $('#slideshow').crossSlide({
+              fade: 1
+            }, [
+              {
+                src:  '/images/foto1.png',
+                from: '100% 80% 1x',
+                to:   '100% 0% 1.7x',
+                time: 3
+              }, {
+                src:  '/images/foto2.png',
+                from: 'top left',
+                to:   'bottom right 1.5x',
+                time: 2
+              }, {
+                src:  '/images/foto3.png',
+                from: '100% 80% 1.5x',
+                to:   '80% 0% 1.1x',
+                time: 2
+              }, {
+                src:  '/images/foto4.png',
+                from: '100% 50%',
+                to:   '30% 50% 1.5x',
+                time: 2
+              }
+            ], function(idx, img, idxOut, imgOut) {
+              if (idxOut == undefined)
+              {
+                // starting single image phase
+              }
+              else
+              {
+                $('#title_slide_' + idx).animate({ color: "#bab9b9" }, 800).animate({ color: "#000000" }, 1000);
+              }
             });
-            </script>
-            <div id="nav" style="display: none"></div>
-            <div class='desc-center'>
-              <img src="/images/foto3.png" width="250" height="250" />
-              <img src="/images/foto1.png" width="250" height="250" />
-              <img src="/images/foto2.png" width="250" height="250" />
-              <img src="/images/foto4.png" width="250" height="250" />
-            </div>
-            <div class="desc-right">
-                <div class="desc-nosotros">
-
-                    <div class="desc-middle">
-                        <div id="title_slide_1" class="desc-title league-gothic">Nosotros</div>
-                        <div class="desc-about georgia">Conocenos un poco más.<br />Quiénes somos, qué hacemos...</div>
-                        <div class="masinfo"><a href="/nosotros" class="league-gothic"><span class="small button left"></span><span class="small button center">Más información</span><span class="small button right"></span></a></div>
-                    </div>
-
-                </div>
-                <div class="clear"></div>
-                <div class="desc-clases">
-
-                    <div class="desc-middle">
-                        <div id="title_slide_3" class="desc-title league-gothic">Clases particulares</div>
-                        <div class="desc-about georgia">Ofrecemos clases particulares y a distancia.<br />¡Empezá a practicar hoy!
-                        </div>
-                        <div class="masinfo"><a href="/clases-particulares" class="league-gothic"><span class="small button left"></span><span class="small button center">Más información</span><span class="small button right"></span></a></div>
-                    </div>
-
-                </div>
-            </div>
+        });
+        </script>
+        <div id='slideshow'>
         </div>
+
+        <ul class="desc">
+            <li class="desc-metodo">
+                <div class="desc-middle">
+                    <div id="title_slide_0" class="desc-title league-gothic">SwáSthya</div>
+                    <div class="desc-about georgia">La sistematización del<br />Yôga Antiguo, preclásico.</div>
+                </div>
+            </li>
+            <li class="desc-nosotros">
+                <div class="desc-middle">
+                    <div id="title_slide_1" class="desc-title league-gothic">La escuela</div>
+                    <div class="desc-about georgia">Conocenos un poco más.<br />Quiénes somos, qué hacemos...</div>
+                </div>
+            </li>
+            <li class="desc-clases">
+                <div class="desc-middle">
+                    <div id="title_slide_2" class="desc-title league-gothic">Formación profesional</div>
+                    <div class="desc-about georgia">Lorem ipsum dolor sit amet<br />¡Empezá a practicar hoy!</div>
+                </div>
+            </li>
+            <li class="sede">
+                <div class="desc-middle">
+                    <div id="title_slide_3" class="desc-title league-gothic">Empresas</div>
+                    <div class="desc-about georgia">Conocé nuestros servicios para empresas y gimnasios.</div>
+                </div>
+            </li>
+        </ul>
     </div>
 </div>
