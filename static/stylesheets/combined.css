@@ -157,24 +157,52 @@ a{
     text-indent: -9999px;
 }
 
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 .top-right{
 	float: right;
     font-variant:small-caps;
 }
 
-.top-right div{
+.top-right li{
 	float:left;
 	margin:20px 0px 0px;
 	padding: 0px 30px 0px 0px;
+    position: relative;
 }
 
-.top-right div a{
+.top-right li a{
 	color: #ffffff;
 	font-size: 15px;
 	text-decoration: none;
 }
 
-.top-right div a:hover{
+.top-right li ul {
+    position: absolute;
+    list-style: none;
+    margin: 0;
+    padding: 0 10px 5px;
+    width: 390px;
+}
+
+.top-right li ul a {
+    color: #1A0701;
+}
+
+.top-right li > ul {
+    display: none;
+    /*background: #1A0701 url("../images/bottom-background.png")*/
+}
+
+.top-right li:hover > ul {
+    display:inline-block;
+}
+
+.top-right li a:hover{
 	color: #29d4c7;
 }
 
