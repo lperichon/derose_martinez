@@ -132,6 +132,14 @@ class DeRoseMartinezApp < Sinatra::Base
     erb :'imagenes', :layout => :'page-layout'
   end
 
+
+  get('/escuela') do
+    @page_title = "La escuela"
+    @description = "Conocenos un poco más."
+
+    erb :'escuela', :layout => :'page-layout'
+  end
+
   get('/facebook') do
     #require 'sinatra-facebook-signed-request'
     #ensure_facebook_request!('183431315036552', '4c7869fb2bcd85f159bacf1dc78d3034')
