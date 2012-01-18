@@ -17,10 +17,21 @@
   <!--[if IE]>
   <link rel="stylesheet" href="/stylesheets/combined-ie.css" type="text/css">
   <![endif]-->
+  <link rel="stylesheet" href="/stylesheets/galleriffic-5.css" type="text/css">
+  <link rel="stylesheet" href="/stylesheets/white.css" type="text/css">
+
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/jquery-ui.min.js"></script>
   <script type="text/javascript" src="http://github.com/tobia/CrossSlide/raw/master/jquery.cross-slide.min.js"></script>
+  <script type="text/javascript" src="/javascripts/jquery.history.js"></script>
+  <script type="text/javascript" src="/javascripts/jquery.galleriffic.js"></script>
+  <script type="text/javascript" src="/javascripts/jquery.opacityrollover.js"></script>
   <script type="text/javascript" src="/javascripts/combined.js"></script>
+  <!-- We only want the thunbnails to display when javascript is disabled -->
+  <script type="text/javascript">
+      document.write('<style>.noscript { display: none; }</style>');
+  </script>
+
   <% unless Sinatra::Application.development? %>
   <script type="text/javascript">
     var _gaq = _gaq || [];
