@@ -16,8 +16,10 @@ body {
     margin-left: 20px;
 }
 
-.top-right div {
-    padding: 0 17px 0 0;
+
+
+.top-right li {
+    padding: 0 15px 0 0;
 }
 
 .contact-btn {
@@ -84,11 +86,19 @@ body {
     margin: 45px 0 0 37px;
 }
 
+#contact_form2 {
+    overflow: hidden;
+    padding-bottom: 8px;
+}
+
 .like_button {
     width: 80px;
-    margin: 0 auto;
+    margin: 20px auto 0;
     overflow: hidden;
+    clear: both;
 }
+
+
 
 .fanbox {
 	width: 403px; margin: 0 auto;
