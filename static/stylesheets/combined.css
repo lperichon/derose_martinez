@@ -283,8 +283,8 @@ a{
 
 .footer-left-middle{
 	float: left;
-	margin: 45px 0px 0px 30px;
-	width: 215px;
+	margin: 45px 0px 0px 0px;
+	width: 256px;
 }
 
 .footer-right-middle{
