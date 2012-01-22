@@ -18,4 +18,14 @@ $(document).ready(function() {
             }
         }
     });
+
+    $('.top-right li:has(ul)').hover(function(){
+        $('.top-right span#to_hide').hide("slide",{}, 500, function(){
+            $(".top-right li ul").show("slide");
+        });
+    },function(){
+        $('.top-right li ul').hide("slide", {}, 500, function(){
+            $('.top-right span#to_hide').show("slide");
+        });
+    });
 });
