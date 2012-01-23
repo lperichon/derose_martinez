@@ -1629,4 +1629,16 @@ a:hover .atc-icon{
 /*.small.button.right{*/
     /*background: url("../images/button_right_27.png") no-repeat top right;*/
     /*width:3px;*/
+/*}*/
+
+.profileimage {
+    width: 200px;
+    vertical-align: top;
+    margin-top:20px;
+}
+
+.profilecontent {
+    display: inline-block;
+    width: 400px;
+    margin-left: 15px;
 }
