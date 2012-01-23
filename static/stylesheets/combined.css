@@ -168,7 +168,7 @@ a{
 	position: absolute;
     left: 200px;
     font-variant:small-caps;
-    width: 650px;
+    width: 720px;
 }
 
 .top-right li{
@@ -192,7 +192,7 @@ a{
     top: -20px;
     position: absolute;
     left: 80px;
-    width: 450px;
+    width: 500px;
 }
 
 .top-right li ul a {
@@ -1580,9 +1580,10 @@ a:hover .atc-icon{
     /*width:8px;*/
 /*}*/
 
-/*.medium.button {*/
+.medium.button {
     /*height: 42px;*/
-/*}*/
+    padding: 4px 12px;
+}
 
 /*.medium.button.left{*/
     /*background: url("../images/button_left_42.png") no-repeat;*/

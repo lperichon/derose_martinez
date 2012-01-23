@@ -132,6 +132,12 @@ class DeRoseMartinezApp < Sinatra::Base
     erb :'imagenes', :layout => :'page-layout'
   end
 
+  get('/inscripciones') do
+    @page_title = "Inscripciones"
+    @description = "¡Empezá a practicar hoy!"
+
+    erb :'inscripciones', :layout => :'page-layout'
+  end
 
   get('/escuela') do
     @page_title = "La escuela"
