@@ -1632,10 +1632,15 @@ a:hover .atc-icon{
     /*width:3px;*/
 /*}*/
 
-.profileimage {
+.profileinfo {
     width: 200px;
     vertical-align: top;
     margin-top:20px;
+    display: inline-block;
+}
+
+.profileinfo img {
+    width:200px;
 }
 
 .profilecontent {
@@ -1643,3 +1648,4 @@ a:hover .atc-icon{
     width: 400px;
     margin-left: 15px;
 }
+
