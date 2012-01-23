@@ -28,4 +28,12 @@ $(document).ready(function() {
             $('.top-right span#to_hide').show("slide");
         });
     });
+
+    $('#horarios_lightbox_link').lightBox({
+    imageLoading: '/images/lightbox-ico-loading.gif',
+    imageBtnClose: '/images/lightbox-btn-close.gif',
+    imageBtnPrev: '/images/lightbox-btn-prev.png',
+    imageBtnNext: '/images/lightbox-btn-next.png',
+    imageBlank: '/images/lightbox-blank.gif'
+   });
 });
