@@ -49,6 +49,7 @@ div.slideshow-container {
 	clear: both;
 	float: left;
 	height: 610px;
+    width: 610px;
 }
 
 div.loader {
