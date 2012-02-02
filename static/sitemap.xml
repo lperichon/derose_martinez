@@ -11,6 +11,26 @@
       <priority>0.8</priority>
    </url>
    <url>
+      <loc>http://yogaenmartinez.com.ar/escuela</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>http://yogaenmartinez.com.ar/imagenes</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>http://yogaenmartinez.com.ar/formacion-profesional</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>http://yogaenmartinez.com.ar/inscripciones</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
       <loc>http://yogaenmartinez.com.ar/nosotros</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
