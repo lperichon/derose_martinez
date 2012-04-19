@@ -4,7 +4,7 @@ require 'erb'
 
 class DeRoseMartinezApp < Sinatra::Base
   set :static, true
-  set :public, File.dirname(__FILE__) + '/static'
+  set :public_folder, File.dirname(__FILE__) + '/static'
 
   set :email_username, ENV['SENDGRID_USERNAME']
   set :email_password, ENV['SENDGRID_PASSWORD']
