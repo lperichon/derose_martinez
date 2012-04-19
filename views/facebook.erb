@@ -48,13 +48,13 @@
             <div class="request-text georgia">Ingresá tu e-mail para recibir más información (¡No hacemos spam!)</div>
             <div class="error request-text" style="margin-top: 5px; color: red;"><%= @notice %></div>
             <div class="success request-text" style="margin-top: 5px; color: green;"><%= @success %></div>
-            <form action="http://yogaenmartinez.com.ar/contacto" method="post" id="contact_form2">
+            <form action="/contacto" method="post" id="contact_form2">
                 <div style="margin: 10px 0px 0px;">
                     <input type="hidden" name="fb" value="true"/>
                     <div style="float:left"><input class="request-textfield georgia" name="email"
                                                    id="Subscriber_email2" type="text" value=""></div>
                     <div class="league-gothic submit_button_wrapper" style="float:left">
-                        <a rel="nofollow" href="#" onclick="$('#contact_form').submit();"><span class="submit button">Enviar</span></a>
+                        <a rel="nofollow" href="#" onclick="$('#contact_form2').submit();"><span class="submit button">Enviar</span></a>
                     </div>
                 </div>
             </form>
