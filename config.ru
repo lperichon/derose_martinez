@@ -1,3 +1,3 @@
-require 'derose_martinez'
+require './derose_martinez'
 
 run DeRoseMartinezApp.new
