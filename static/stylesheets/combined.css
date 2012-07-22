@@ -637,6 +637,17 @@ a.facebook{
 	outline: none;
 }
 
+a.google_plus{
+    background: url("../images/google_plus.png") no-repeat;
+    width: 40px;
+    height: 40px;
+    margin: 0px 0px 0px 10px;
+    text-indent: -9999px;
+    display: block;
+    outline: none;
+}
+
+
 a.linkedin{
 	background: url("../images/linkedin.png") no-repeat;
 	width: 40px;
