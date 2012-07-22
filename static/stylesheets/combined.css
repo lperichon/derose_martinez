@@ -232,9 +232,9 @@ a{
 
 .contact-btn {
     z-index: 10;
-	width: 264px;
+	width: 211px;
 	margin: 0 auto;
-	padding: 33px 0px 0px;
+	padding: 8px 0px 0px;
 }
 
 
@@ -1536,6 +1536,11 @@ a:hover .atc-icon{
     padding-top: 20px;
     padding-left: 30px;
     padding-right: 30px;
+}
+
+.big.button.contact {
+    padding-top: 2px;
+    padding-bottom: 0;
 }
 
 /*.big.button.center{*/
