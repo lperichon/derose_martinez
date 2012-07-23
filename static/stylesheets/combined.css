@@ -158,6 +158,25 @@ a{
     text-indent: -9999px;
 }
 
+#contact_header {
+    float: right;
+    color: #FFF;
+    font-weight: bold;
+    line-height: 52px;
+    font-size: 1.3em;
+}
+
+.telephone{
+    width: 64px;
+    height: 64px;
+    float: left;
+    margin: 0;
+    padding: 0;
+    background: url("../images/phone_icon.png") no-repeat;
+    text-indent: -9999px;
+}
+
+
 .menu {
     list-style: none;
     margin: 0;
@@ -220,7 +239,7 @@ a{
 	width: 470px;
     height: 80px;
 	margin: 0 auto;
-	padding: 115px 0px 0px;
+	padding: 80px 0 36px 0;
     font-size:2.8em;
     color: #1A0701;
 }
