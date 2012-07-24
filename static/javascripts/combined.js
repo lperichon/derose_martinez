@@ -80,10 +80,15 @@ $(document).ready(function() {
 
    $.urlParam = function(name){
         var results = new RegExp('[\\?&]' + name + '=([^&#]*)').exec(window.location.href);
-        return results[1] || 0;
+        if(results == null) {
+            return false;
+        }
+        return results[1];
    }
 
+   if($.urlParam('contactReason')) {
     $('#Contact_contactReason').val($.urlParam('contactReason'));
+   }
 
    contact_reason_change_action();
    $("#Contact_contactReason").change(contact_reason_change_action);
