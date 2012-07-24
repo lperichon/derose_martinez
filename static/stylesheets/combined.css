@@ -476,6 +476,14 @@ a{
 	margin: 5px 0px 0px;
 }
 
+#contact_message {
+    display:none;
+}
+
+#contact_horarios_wrapper {
+    display:none;
+}
+
 .ca-text-field{
 	width: 453px;
 	height: 32px;
