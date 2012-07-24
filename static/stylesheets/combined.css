@@ -185,7 +185,7 @@ a{
 
 .top-right{
 	position: absolute;
-    left: 200px;
+    left: 170px;
     font-variant:small-caps;
     width: 720px;
 }
@@ -193,7 +193,7 @@ a{
 .top-right li{
 	float:left;
 	margin:20px 0px 0px;
-	padding: 0px 30px 0px 0px;
+	padding: 0px 25px 0px 0px;
     position: relative;
 }
 
@@ -283,7 +283,7 @@ a{
 
 .desc li {
     display: inline-block;
-    width: 237px;
+    width: 236px;
     vertical-align: top;
     text-align: center;
 }
