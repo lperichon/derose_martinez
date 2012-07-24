@@ -54,6 +54,11 @@ class DeRoseMartinezApp < Sinatra::Base
 
     @contact_reason = params[:contactReason]
 
+    @horarios_8 = params['8hs']
+    @horarios_18 = params['18hs']
+    @horarios_19 = params['19hs']
+    @horarios_20 = params['20hs']
+
     @message = params[:message]
 
     unless Sinatra::Application.development?

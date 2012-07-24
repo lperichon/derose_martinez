@@ -476,11 +476,15 @@ a{
 	margin: 5px 0px 0px;
 }
 
-#contact_message {
+#show_message_link {
     display:none;
 }
 
-#contact_horarios_wrapper {
+#contact_message {
+    /*display:none;*/
+}
+
+#contact_horarios_wrapper, #contact_empresa_wrapper {
     display:none;
 }
 

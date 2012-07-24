@@ -45,32 +45,45 @@ $(document).ready(function() {
    contact_reason_change_action = function(){
         val = $("#Contact_contactReason option:selected").val();
         switch (val) {
-            case ("-"): case("Otro"):
-            $("#contact_message").show();
-            $("#show_message_link").hide();
+            case ("-"): case("otro"):
+//            $("#contact_message").show();
+//            $("#show_message_link").hide();
+              $("#contact_horarios_wrapper").hide();
+              $("#contact_empresa_wrapper").hide();
             break;
-            case ("Agendar mi primera clase"):
-                $("#contact_message").hide();
-                $("#show_message_link").show();
+            case ("prueba"):
+//                $("#contact_message").hide();
+//                $("#show_message_link").show();
                 $("#contact_horarios_wrapper").show();
+                $("#contact_empresa_wrapper").hide();
                 break;
-            case ("Clases particulares"):
-                $("#contact_message").hide();
-                $("#show_message_link").show();
+            case ("particulares"):
+//                $("#contact_message").hide();
+//                $("#show_message_link").show();
                 $("#contact_horarios_wrapper").hide();
+                $("#contact_empresa_wrapper").hide();
                 break;
-            case ("Clases para empresas"):
-                $("#contact_message").hide();
-                $("#show_message_link").show();
+            case ("empresas"):
+//                $("#contact_message").hide();
+//                $("#show_message_link").show();
                 $("#contact_horarios_wrapper").hide();
+                $("#contact_empresa_wrapper").show();
                 break;
-            case ("Formación profesional"):
-                $("#contact_message").hide();
-                $("#show_message_link").show();
-                $("#contact_horarios_wrapper").hide();
+            case ("formacion"):
+//                $("#contact_message").hide();
+//                $("#show_message_link").show();
+                $("#contact_horarios_wrapper").show();
+                $("#contact_empresa_wrapper").hide();
                 break;
         }
     };
+
+   $.urlParam = function(name){
+        var results = new RegExp('[\\?&]' + name + '=([^&#]*)').exec(window.location.href);
+        return results[1] || 0;
+   }
+
+    $('#Contact_contactReason').val($.urlParam('contactReason'));
 
    contact_reason_change_action();
    $("#Contact_contactReason").change(contact_reason_change_action);
