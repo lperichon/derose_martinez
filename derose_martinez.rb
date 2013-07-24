@@ -39,7 +39,10 @@ class DeRoseMartinezApp < Sinatra::Base
   post '/contacto' do
     require 'pony'
 
-    redirect request.referer + (request.referer.include?('?') ? '&' : '?') + "m=email_blank" if params[:email].blank?
+    if params[:email].blank? || params[:name].blank? || params[:phone].blank? || params[:message].blank?
+      redirect request.referer + (request.referer.include?('?') ? '&' : '?') + "m=required"
+    end
+
     @fb = params[:fb]
     @name = params[:name]
 
@@ -55,6 +58,8 @@ class DeRoseMartinezApp < Sinatra::Base
     @contact_reason = params[:contactReason]
 
     @horarios_8 = params['8hs']
+    @horarios_10 = params['10hs']
+    @horarios_13 = params['13hs']
     @horarios_18 = params['18hs']
     @horarios_19 = params['19hs']
     @horarios_20 = params['20hs']
@@ -181,8 +186,8 @@ class DeRoseMartinezApp < Sinatra::Base
   helpers do
     def flash_message(message)
       case message
-      when "email_blank"
-        @notice = "Por favor, ingresá un email."
+      when "required"
+        @notice = "Por favor, ingresá los campos marcados con '*'"
       when "email_invalid"
         @notice = "El formato del email es incorrecto"
       when "success"

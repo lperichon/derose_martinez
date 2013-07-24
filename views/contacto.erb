@@ -12,15 +12,15 @@
             <div class="error request-text" style="margin-top: 5px; color: red;"><%= @notice %></div>
             <div class="success request-text" style="margin-top: 5px; color: green;"><%= @success %></div>
 
-			<div class="contact-question proxima-nova-condensed">NOMBRE</div>
+			<div class="contact-question proxima-nova-condensed">NOMBRE*</div>
 			<div class="contact-answer">
 				<input class="ca-text-field" name="name" id="Contact_name" type="text" value="" />
             </div>
-			<div class="contact-question proxima-nova-condensed">E-MAIL</div>
+			<div class="contact-question proxima-nova-condensed">E-MAIL*</div>
 			<div class="contact-answer">
 				<input class="ca-text-field" name="email" id="Contact_email" type="text" value="" />
             </div>
-			<div class="contact-question proxima-nova-condensed">TELÉFONO</div>
+			<div class="contact-question proxima-nova-condensed">TELÉFONO*</div>
 			<div class="contact-answer">
 				<input class="ca-text-field" name="phone" id="Contact_phone" type="text" value="" />
             </div>
@@ -28,7 +28,7 @@
 			<div class="contact-answer">
 				<select name="contactReason" id="Contact_contactReason">
                     <option value="-">Seleccionar...</option>
-                    <option value="prueba">Agendar mi primera clase</option>
+                    <option value="prueba">Agendar mi entrevista</option>
                     <option value="articulares">Clases particulares</option>
                     <option value="empresas">Clases para empresas</option>
                     <option value="formacion">Formación profesional</option>
@@ -45,6 +45,8 @@
               <div class="contact-question proxima-nova-condensed">HORARIOS <a  id="horarios_lightbox_link" href="/images/horarios.jpg">(ver horarios)</a></div>
               <div class="contact-answer" id="contact_horarios">
                 <input type="checkbox" name="8hs"/><label>8hs</label>
+                <input type="checkbox" name="10hs"/><label>10hs</label>
+                <input type="checkbox" name="13hs"/><label>13hs</label>
                 <input type="checkbox" name="18hs"/><label>18hs</label>
                 <input type="checkbox" name="19hs"/><label>19hs</label>
                 <input type="checkbox" name="20hs"/><label>20hs</label>
@@ -52,7 +54,7 @@
               </div>
             </div>
             <div id="mensaje">
-                <div class="contact-question proxima-nova-condensed">MENSAJE <a id="show_message_link" href="#">(mostrar)</a></div>
+                <div class="contact-question proxima-nova-condensed">MENSAJE* <a id="show_message_link" href="#">(mostrar)</a></div>
                 <div class="contact-answer" id="contact_message">
                     <textarea class="ca-text-area" name="message" id="Contact_details"></textarea>
                 </div>

@@ -115,7 +115,7 @@ a{
     border-top: 1px solid white;
     padding-top:75px;
 	background: #EDEDED url("../images/bottom-middle-background.png");
-	height: 550px;
+	height: 450px;
     overflow: auto;
 }
 
@@ -250,8 +250,8 @@ a{
 }
 
 .contact-btn {
+	width: 238px;
     z-index: 10;
-	width: 211px;
 	margin: 0 auto;
 	padding: 8px 0px 0px;
 }
@@ -1564,6 +1564,7 @@ a:hover .atc-icon{
 
 .big.button {
     height: 89px;
+    width: 175px;
 }
 
 /*.big.button.left{*/
